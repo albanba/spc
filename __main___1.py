@@ -57,17 +57,13 @@ def main():
     cast.add_actor("robots", robot)
     
     # create the artifacts
-    
-
     for n in range(DEFAULT_ARTIFACTS):
         text = random.choice(['*', "O"] )
      
-
         x = random.randint(1, COLS - 1)
         y = random.randint(1, ROWS - 1)
         position = Point(x, y)
         position = position.scale(CELL_SIZE)
-
 
         if text == "*":
 
@@ -89,9 +85,6 @@ def main():
         artifact.set_position(position)
         artifact.set_velocity(Point(0, 1))
         cast.add_actor("artifacts", artifact)
-
-    
-    
     
     # start the game
     keyboard_service = KeyboardService(CELL_SIZE)
@@ -101,7 +94,7 @@ def main():
     script = Script()
     script.add_action("input", ControlActorsAction(keyboard_service, cast))
     script.add_action("update", MoveActorsAction(keyboard_service))
-    # script.add_action("update", HandleCollisionsAction())
+    script.add_action("update", HandleCollisionsAction())
     script.add_action("output", DrawActorsAction(video_service))
     
     director = Director(keyboard_service, video_service, script)

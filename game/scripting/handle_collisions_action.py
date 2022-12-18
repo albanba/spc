@@ -19,6 +19,7 @@ class HandleCollisionsAction():
     def __init__(self):
         """Constructs a new HandleCollisionsAction."""
         self._is_game_over = False
+        self._points = 0
         
 
     def execute(self, cast, script):
@@ -43,11 +44,11 @@ class HandleCollisionsAction():
         artifacts = cast.get_actors("artifacts")
         blasts = cast.get_actors("blasts")
         robot = cast.get_actors("robots")[0]
-        banner = cast.get_actors("banners")
+        banner = cast.get_actors("banners")[0]
         
         for blast in blasts:
             for artifact in artifacts:
-                if blast.get_position(self).equals(artifact.get_position()):
+                if blast.get_position().equals(artifact.get_position()):
                     self._points = self._points + artifact.calculate_points()
                     cast.remove_actor("artifacts", artifact)
                     cast.remove_actor("blasts", blast)
