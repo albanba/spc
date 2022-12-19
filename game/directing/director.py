@@ -24,7 +24,7 @@ class Director:
         """Starts the game using the given cast. Runs the main game loop.
 
         Args:
-            cast (Cast): The cast of actors.
+            script (Script): The actions of the script.
         """
         self._video_service.open_window()
         while self._video_service.is_window_open():         

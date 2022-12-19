@@ -7,7 +7,7 @@ class Blast(Actor):
     """
     Star Wars phaser look a like 
     
-    The responsibility of blast is to move itself.
+    The responsibility of blast is to create a new instance of itself.
 
     Attributes:
         blast = : single character always moving forward until collision.

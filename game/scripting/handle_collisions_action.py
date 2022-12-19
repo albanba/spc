@@ -9,8 +9,9 @@ class HandleCollisionsAction():
     """
     An update action that handles interactions between the actors.
     
-    The responsibility of HandleCollisionsAction is to handle the situation when the cycle collides
-    with the the segments of the other cycle and handles game is over.
+    The responsibility of HandleCollisionsAction is to handle the situation when the blasts collide
+    with the garbage or space stations, handles game is over if the robot craches against garbage 
+    or space stations.
 
     Attributes:
         _is_game_over (boolean): Whether or not the game is over.
@@ -36,7 +37,7 @@ class HandleCollisionsAction():
 
     
     def _handle_collision(self, cast):
-        """Sets the game over flag if the cycle collides with the segments of the other cycle.
+        """Sets the game over flag if the robot collides.
         
         Args:
             cast (Cast): The cast of Actors in the game.
@@ -60,7 +61,7 @@ class HandleCollisionsAction():
       
         
     def _handle_game_over(self, cast):
-        """Shows the 'game over' message and turns the cycles white if the game is over.
+        """Shows the 'game over' message and turns the actors white if the game is over.
         
         Args:
             cast (Cast): The cast of Actors in the game.

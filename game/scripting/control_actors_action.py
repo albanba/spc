@@ -36,10 +36,6 @@ class ControlActorsAction(Action):
         velocity = self._keyboard_service.get_direction()
         self.robot.set_velocity(velocity)  
         
-        # blasts = cast.get_actors("blasts")
-
-        # for i in blasts:
-        #     self._direction = Point(0,-1).scale(self._cell_size)
         
         create = self._keyboard_service.create_blast()
         if create == True: 

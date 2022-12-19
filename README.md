@@ -1,6 +1,5 @@
-# Cycles
-Cycles is a Tron's motorcyle race look a like game for two players. You play this game 
-on a simulated terminal, with a textual interface and two players have to avoid colliding with each other.
+# Space Cleaner
+In the future, robots will clean the space. For every piece of galactic garbage (*) distroyed you get one point.  If you hit one of space colonies (light blue squares) you lose one point. If you crash the robot with another object the game is over. 
 
 ## Getting Started
 ---
@@ -20,10 +19,11 @@ project folder. Select the main module inside the hunter folder and click the "r
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- cycles               (source code for game)
++-- spc                 (source code for game)
   +-- game              (specific game classes)
   +-- __main__.py       (entry point for program)
-+-- README.md           (general info)
+  +-- constants.py      (list of constant variables)
+  +-- README.md         (general info)
 ```
 
 ## Required Technologies
